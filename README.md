@@ -1,9 +1,8 @@
-![](https://imgur.com/YkOoS4h.png)
-![](https://imgur.com/g3KyOqV.png)
+# Dialogflow for Web
 
 #### 🚨 DEPRECATION WARNING: THIS PROJECT IS NO LONGER SUPPORTED, MOVE TO [V2](https://github.com/MishUshakov/dialogflow-web-v2)
 
-# Dialogflow for Web
+![](https://imgur.com/g3KyOqV.png)
 
 > Dialogflow lets you build conversational interfaces on top of your products and services by providing a powerful natural language understanding (NLU) engine to process and understand natural language input
 
