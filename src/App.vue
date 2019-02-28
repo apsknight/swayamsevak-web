@@ -97,10 +97,13 @@
                                     <div class="mdc-card slide">
                                         <img class="mdc-card__media-item" :src="item.image.url" v-if="item.image">
                                         <section class="mdc-card__primary">
-                                            <h1 class="mdc-card__title themed" @click="autosubmit(item.optionInfo.key)">{{item.title}}</h1>
+                                            <h1 class="mdc-card__title themed" @click="autosubmit(item.optionInfo.key)">{{item.heading}}</h1>
                                         </section>
                                         <section class="mdc-card__supporting-text">
-                                            {{item.description}}
+                                            {{item.title1}}
+                                        </section>
+                                        <section class="mdc-card__supporting-text">
+                                            {{item.title2}}
                                         </section>
                                     </div>
                                 </slide>
