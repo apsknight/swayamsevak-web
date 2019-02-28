@@ -1,34 +1,34 @@
 {
-    "short_name": "Dialogflow",
-    "name": "Dialogflow Progressive WebApp",
+    "short_name": "SwayamSevak",
+    "name": "SwayamSevak webapp chatbot.",
     "icons": [
       {
-        "src": "https://console.dialogflow.com/api-client/assets/img/logo-short.png",
+        "src": "https://user-images.githubusercontent.com/29799995/53495667-6392a000-3ac6-11e9-93fe-2c7005ee65ba.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "https://console.dialogflow.com/api-client/assets/img/logo-short.png",
+        "src": "https://user-images.githubusercontent.com/29799995/53495668-6392a000-3ac6-11e9-8f15-a66dede37a1d.png",
         "type": "image/png",
         "sizes": "72x72"
       },
       {
-        "src": "https://console.dialogflow.com/api-client/assets/img/logo-short.png",
+        "src": "https://user-images.githubusercontent.com/29799995/53495669-642b3680-3ac6-11e9-9644-227ddc732a5b.png",
         "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "https://console.dialogflow.com/api-client/assets/img/logo-short.png",
+        "src": "https://user-images.githubusercontent.com/29799995/53495670-642b3680-3ac6-11e9-88e2-1561f80498d7.png",
         "type": "image/png",
         "sizes": "144x144"
       },
       {
-        "src": "https://console.dialogflow.com/api-client/assets/img/logo-short.png",
+        "src": "https://user-images.githubusercontent.com/29799995/53495671-64c3cd00-3ac6-11e9-92be-af31bc229ab4.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "https://console.dialogflow.com/api-client/assets/img/logo-short.png",
+        "src": "https://user-images.githubusercontent.com/29799995/53495672-64c3cd00-3ac6-11e9-9470-e29810104579.png",
         "type": "image/png",
         "sizes": "512x512"
       }

@@ -2,7 +2,7 @@
 <main id="app">
 
     <!-- The input -->
-    <div class="query">
+    <!-- <div class="query">
         <div class="wrapper" v-if="micro == false">
             <i class="material-icons iicon" @click="microphone(true)">mic</i>
             <input :aria-label="config.locale.strings.queryTitle" autocomplete="off" v-model="query" class="queryform" @keyup.enter="submit()" :placeholder="config.locale.strings.queryTitle" autofocus type="text">
@@ -12,7 +12,7 @@
         <div class="wrapper" v-else>
             <i class="material-icons iicon recording" @click="microphone(false)">mic</i><input class="queryform" :placeholder="speech" readonly>   
         </div>
-    </div>
+    </div> -->
 
     <section class="wrapper ai-window">
 
@@ -22,12 +22,12 @@
         <!-- Display Welcome Message -->
         <div v-if="answers.length == 0 && online == true">
             <h1 class="title mdc-typography--headline">
-                <div class="material-icons up">arrow_upward</div>
-                <br>
-                <br>
+
                     {{config.locale.strings.welcomeTitle}}
 
                     <p class="mdc-typography--body2">{{config.locale.strings.welcomeDescription}}</p>
+
+                <div class="material-icons up">arrow_downward</div>
             </h1>
         </div>
 
@@ -152,9 +152,26 @@
         </table>
 
         <br>
-        <p class="copyright" v-if="answers.length > 0">Proudly powered by <a href="https://ushakov.co">Ushakov</a> & <a href="https://dialogflow.com">Dialogflow</a></p>
-        <a id="bottom"></a>
+        <!-- Removed it as no loger required. -->
+        <!-- <p class="copyright" v-if="answers.length > 0">Created by Team Champions_sam for 
+            <a href="https://www.sih.gov.in">Smart India Hackathon - 2019.</a></p>
+        <a id="bottom"></a> -->
     </section>
+
+
+    <!-- The input -->
+    <div class="query" style="position: fixed; bottom: 0; width: 100%;">
+        <div class="wrapper" v-if="micro == false">
+            <i class="material-icons iicon" @click="microphone(true)">mic</i>
+            <input :aria-label="config.locale.strings.queryTitle" autocomplete="off" v-model="query" class="queryform" @keyup.enter="submit()" :placeholder="config.locale.strings.queryTitle" autofocus type="text">
+            <i class="material-icons iicon t2s" @click="mute(true)" v-if="muted == false">volume_up</i>
+            <i class="material-icons iicon t2s" @click="mute(false)" v-else>volume_off</i>
+        </div>
+        <div class="wrapper" v-else>
+            <i class="material-icons iicon recording" @click="microphone(false)">mic</i><input class="queryform" :placeholder="speech" readonly>   
+        </div>
+    </div>
+
 </main>
 </template>
 
@@ -187,7 +204,8 @@ export default {
             setTimeout(() => { 
                 document.querySelector('#bottom').scrollIntoView({ 
                     behavior: 'smooth' 
-                })
+                });
+                console.log('CONSOLING..!');
             }, 2) // if new answers arrive, wait for render and then smoothly scroll down to #bottom selector, used as anchor
         }
     },
