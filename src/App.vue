@@ -71,10 +71,6 @@
                                 <h1 class="mdc-card__title">
                                     {{r.title}}
                                 </h1>
-                                <br>
-                                <h2 class="mdc-card__subtitle">
-                                    {{r.subtitle}}
-                                </h2>
                             </section>
                             <section class="mdc-card__supporting-text">
                                 {{r.formattedText}}
@@ -102,6 +98,12 @@
                                         <img class="mdc-card__media-item" :src="item.image.url" v-if="item.image">
                                         <section class="mdc-card__primary">
                                             <h1 class="mdc-card__title themed" @click="autosubmit(item.optionInfo.key)">{{item.heading}}</h1>
+                                            <h2 class="mdc-card__subtitle" v-if="item.status == 1" style="color:green">
+                                             On Duty
+                                            </h2>
+                                             <h2 class="mdc-card__subtitle" v-if="item.status == 0" style="color:red">
+                                             Off Duty
+                                            </h2>
                                         </section>
                                         <section class="mdc-card__supporting-text">
                                             {{item.title1}}
