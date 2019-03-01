@@ -67,17 +67,21 @@
                         <!-- Bot message types / Card -->
 
                         <div class="mdc-card" v-if="r.type == 'basic_card'">
-                            <img :title="r.image.accessibilityText" :alt="r.image.accessibilityText" class="mdc-card__media-item" :src="r.image.url" v-if="r.image">
                             <section class="mdc-card__primary">
-                                <h1 class="mdc-card__title">{{r.title}}</h1>
+                                <h1 class="mdc-card__title">
+                                    {{r.title}}
+                                </h1>
                                 <br>
-                                <h2 class="mdc-card__subtitle">{{r.subtitle}}</h2>
+                                <h2 class="mdc-card__subtitle">
+                                    {{r.subtitle}}
+                                </h2>
                             </section>
                             <section class="mdc-card__supporting-text">
                                 {{r.formattedText}}
                             </section>
-                            <section class="mdc-card__actions" v-for="button in r.buttons">
-                                <a class="mdc-button mdc-button--compact themed mdc-card__action" target="_blank" :href="button.openUrlAction.url">{{button.title}} <i class="material-icons openlink">open_in_new</i></a>
+                            <section class="mdc-card__actions">
+                                <a class="mdc-button mdc-button--compact themed mdc-card__action" :href="r.button.uri" target="_blank">
+                                    {{r.button.title}} <i class="material-icons openlink">open_in_new</i></a>
                             </section>
                         </div>
 
