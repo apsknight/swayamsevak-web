@@ -288,7 +288,7 @@ export default {
 
         setInterval(() => {
             this.broadcast();
-        }, 3000);
+        }, 30000);
     }
 }
 </script>
