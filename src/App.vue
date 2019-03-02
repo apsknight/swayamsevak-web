@@ -66,6 +66,10 @@
 
                         <!-- Bot message types / Card -->
 
+                        <div v-if="r.type == 'simple'" class="bubble bot">
+                            {{r.speech}}
+                        </div>
+
                         <div class="mdc-card" v-if="r.type == 'basic_card'">
                             <section class="mdc-card__primary">
                                 <h1 class="mdc-card__title">
