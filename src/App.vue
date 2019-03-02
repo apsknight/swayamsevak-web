@@ -48,7 +48,7 @@
 
             <!-- Your messages -->
             <!-- Only show if message is not a broadcast. -->
-            <tr v-if="a.result.resolvedQuery!='braodcast'">
+            <tr v-if="a.result.resolvedQuery!='broadcast'">
                 <td class="bubble">{{a.result.resolvedQuery}}</td>
             </tr>
 
