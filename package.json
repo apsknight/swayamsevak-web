@@ -5,10 +5,12 @@
   "author": "Ushakov",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress",
+    "start": "node ./server.js"
   },
   "dependencies": {
     "api-ai-javascript": "^2.0.0-beta.21",
+    "express": "^4.16.4",
     "vue": "^2.2.1",
     "vue-carousel": "^0.6.5"
   },
