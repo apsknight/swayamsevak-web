@@ -54,7 +54,6 @@
             <!-- Dialogflow messages -->
             <tr>
                 <td>
-
                     <!-- Bot message types / Speech -->
 
                     <div v-if="a.result.fulfillment.speech" class="bubble bot">
@@ -164,8 +163,8 @@
         <br>
         <!-- Removed it as no loger required. -->
         <!-- <p class="copyright" v-if="answers.length > 0">Created by Team Champions_sam for 
-            <a href="https://www.sih.gov.in">Smart India Hackathon - 2019.</a></p>
-        <a id="bottom"></a> -->
+            <a href="https://www.sih.gov.in">Smart India Hackathon - 2019.</a></p> -->
+        <a id="bottom"></a>
     </section>
 
 </main>
@@ -201,12 +200,12 @@ export default {
                 document.querySelector('#bottom').scrollIntoView({ 
                     behavior: 'smooth' 
                 });
-                console.log('CONSOLING..!');
             }, 2) // if new answers arrive, wait for render and then smoothly scroll down to #bottom selector, used as anchor
-        }
+        },
     },
     methods: {
         submit(){
+            console.log('Submitted');
             client.textRequest(this.query).then((response) => {
                 if(response.result.action == "input.unknown" && this.config.app.googleIt == true){
                     response.result.fulfillment.messages[0].unknown = true
@@ -259,7 +258,26 @@ export default {
                     self.autosubmit(self.speech)
 			    }
             }
+        },
+
+        broadcast: function () {
+            console.log('Fetching broadcasts..!');
+            client.textRequest('broadcasts').then((response) => {
+                if(response.result.action == "input.unknown" && this.config.app.googleIt == true){
+                    response.result.fulfillment.messages[0].unknown = true
+                    response.result.fulfillment.messages[0].text = response.result.resolvedQuery
+                } // if the googleIt is enabled, show the button
+            }
         }
+    },
+
+    mounted: function () {
+        console.log('Im ready');
+        this.broadcast();
+
+        setInterval(() => {
+            this.broadcast();
+        }, 3000);
     }
 }
 </script>
