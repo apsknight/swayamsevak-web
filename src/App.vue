@@ -78,8 +78,8 @@
                                 {{r.title2}}
                             </section>
                             <section class="mdc-card__actions">
-                                <a class="mdc-button mdc-button--compact themed mdc-card__action" :href="r.button.uri" target="_blank">
-                                    {{r.button.title}} <i class="material-icons openlink">open_in_new</i></a>
+                                <a :href="r.button.uri" target="_blank">
+                                    <button class="redirect">{{r.button.title}}<i class="material-icons openlink">open_in_new</i></button></a>
                             </section>
                         </div>
 
