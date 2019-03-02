@@ -101,10 +101,10 @@
                                         <section class="mdc-card__primary">
                                             <h1 class="mdc-card__title themed" @click="autosubmit(item.optionInfo.key)">{{item.heading}}</h1>
                                             <h2 class="mdc-card__subtitle" v-if="item.status == 1" style="color:green">
-                                             On Duty
+                                             Available
                                             </h2>
                                              <h2 class="mdc-card__subtitle" v-if="item.status == 0" style="color:red">
-                                             Off Duty
+                                             Not Available
                                             </h2>
                                         </section>
                                         <section class="mdc-card__supporting-text">
