@@ -69,11 +69,13 @@
                         <div class="mdc-card" v-if="r.type == 'basic_card'">
                             <section class="mdc-card__primary">
                                 <h1 class="mdc-card__title">
-                                    {{r.title}}
+                                    {{r.heading}}
                                 </h1>
                             </section>
                             <section class="mdc-card__supporting-text">
-                                {{r.formattedText}}
+                                {{r.title1}}
+                                <br>
+                                {{r.title2}}
                             </section>
                             <section class="mdc-card__actions">
                                 <a class="mdc-button mdc-button--compact themed mdc-card__action" :href="r.button.uri" target="_blank">
@@ -107,8 +109,7 @@
                                         </section>
                                         <section class="mdc-card__supporting-text">
                                             {{item.title1}}
-                                        </section>
-                                        <section class="mdc-card__supporting-text">
+                                            <br>
                                             {{item.title2}}
                                         </section>
                                     </div>
