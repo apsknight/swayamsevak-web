@@ -57,7 +57,7 @@
 
                     <!-- Bot message types / Speech -->
 
-                    <div v-if="a.result.fulfillment.speech" class="bubble bot">
+                    <div v-if="a.result.fulfillment.speech && !(a.result.fulfillment.messages)" class="bubble bot">
                         {{a.result.fulfillment.speech}}
                     </div>
 
