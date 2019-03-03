@@ -1,6 +1,5 @@
 <template>
 <main id="app">
-
     <!-- The input -->
     <div class="query">
         <div class="wrapper" v-if="micro == false">
@@ -20,7 +19,14 @@
         <br>
 
         <!-- Display Welcome Message -->
-        <div v-if="answers.length == 0 && online == true">
+        <h1 class="title mdc-typography--headline">
+
+            Welcome to SwayamSevak! You are at IIT Hospital.
+
+            <p class="mdc-typography--body2">You can type "Hello" for example. Or just press on the microphone to talk</p> 
+            <div class="material-icons up">arrow_downward</div>
+        </h1>
+        <!-- <div v-if="answers.length == 0 && online == true">
             <h1 class="title mdc-typography--headline">
 
                     {{config.locale.strings.welcomeTitle}}
@@ -29,7 +35,7 @@
 
                 <div class="material-icons up">arrow_downward</div>
             </h1>
-        </div>
+        </div> -->
 
         <!-- Display offline message -->
         <div v-if="answers.length == 0 && online == false">
