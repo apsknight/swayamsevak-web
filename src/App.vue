@@ -21,7 +21,7 @@
         <!-- Display Welcome Message -->
         
         <h1 class="title mdc-typography--headline">
-             <img src="https://user-images.githubusercontent.com/29799995/53495669-642b3680-3ac6-11e9-9644-227ddc732a5b.png" alt=""><br>
+             <a href="http://www.iitbbs.ac.in/health-center.php" target="_blank"><img src="https://user-images.githubusercontent.com/29799995/53495669-642b3680-3ac6-11e9-9644-227ddc732a5b.png" alt=""></a><br>
              <!-- <div class="material-icons up">arrow_upward</div><br> -->
             Welcome to SwayamSevak! You are at IIT Hospital.<br>
             <p class="mdc-typography--body2">You can type "Hello" for example. Or just press on the microphone to talk</p> 
