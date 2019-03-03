@@ -88,8 +88,11 @@
                                 {{r.title2}}
                             </section>
                             <section class="mdc-card__actions">
-                                <a :href="r.button.uri" target="_blank">
-                                    <button class="redirect">{{r.button.title}}<i class="material-icons openlink">open_in_new</i></button></a>
+                                <a :href="r.button.uri1" target="_blank">
+                                    <button class="redirect">{{r.button.title1}}<i class="material-icons openlink">open_in_new</i></button></a>
+                                &nbsp &nbsp
+                                <a :href="r.button.uri2" target="_blank" v-if="r.button.title2">
+                                    <button class="redirect">{{r.button.title2}}<i class="material-icons openlink">open_in_new</i></button></a>
                             </section>
                         </div>
 
